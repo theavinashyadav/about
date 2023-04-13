@@ -38,7 +38,7 @@
 <div id="connect" class="fs-5 font-weight-light text-light"><button onclick="onClickConnectWith()" id="connectWith" class="btn text-light fs-5 pb-2 font-weight-light" style="background-color: rgb(252, 93, 35);"> Connect me </button></div>
 
 
-
+<div id="spaces"><br><br><br><br><br><br><br><br></div>
 
 
 
@@ -52,7 +52,7 @@
 </div>
   </div>
 
-  <footer class="bg-light text-center text-lg-start">
+  <footer class="bg-light text-center text-lg-start fixed-bottom">
     <!-- Copyright -->
     <div class="text-center p-2" style="background-color: rgba(240, 236, 236, 0.2); color: rgb(252, 93, 35);">
       <img src="flag.png" alt="💙" style="width: 40px;">રાધે રાધે &nbsp;<img src="flag.png" alt="💙" style="width: 40px;">
@@ -103,7 +103,7 @@ let htmlcode = `<div id="allLinks"><a href="https://www.linkedin.com/in/avinash-
 <a href="mailto:connectwithavinashyadav@gmail.com" class="btn btn-lg text-dark" style="background-color: rgb(250, 254, 255);">
   <img src="gmail.png"> Gmail
 </a>
-
+<br><br>
 </div>
 `
 
@@ -123,7 +123,7 @@ function onClickConnectWith(){
 document.getElementById("connect").insertAdjacentHTML("beforeend",`<button onclick="onClickAgain()" id="connectWithAgain" style="background-color: transparent; border-color: transparent" class="fs-5 pb-3 font-weight-light text-light">Connect with</button>`)
 
 document.getElementById("connectWith").remove()
-
+document.getElementById("spaces").remove()
 
 document.getElementById("connect").insertAdjacentHTML("afterend",htmlcode)
 
@@ -133,6 +133,7 @@ document.getElementById("connect").insertAdjacentHTML("afterend",htmlcode)
 function onClickAgain(){
 document.getElementById("connect").insertAdjacentHTML("beforeend",`<button onclick="onClickConnectWith()" id="connectWith" class="btn text-light fs-5 pb-2 font-weight-light" style="background-color: rgb(252, 93, 35);"> Connect me </button>`)
 
+document.getElementById("connect").insertAdjacentHTML("afterend",`<div id="spaces"><br><br><br><br><br><br><br><br></div>`)
 document.getElementById("connectWithAgain").remove()
 
 document.getElementById("allLinks").remove()
